@@ -1,5 +1,8 @@
 **Brand Tracker Backend**
 
+<img width="1898" height="908" alt="image" src="https://github.com/user-attachments/assets/3325dab0-c272-4168-8bcb-57688eac86d7" />
+
+
 A production-ready backend API for real-time brand monitoring across multiple platforms (Reddit, HackerNews, News, YouTube).
 
 **🚀 Features**
