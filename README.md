@@ -1,43 +1,27 @@
-<<<<<<< HEAD
-# React + Vite
+**Brand Tracker Backend**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Brand-Reputation-Tracker
-
-Brand Tracker Backend
 A production-ready backend API for real-time brand monitoring across multiple platforms (Reddit, HackerNews, News, YouTube).
-🚀 Features
+
+**🚀 Features**
 Multi-Platform Monitoring: Reddit, HackerNews, News API, YouTube
 Real-time Analytics: Sentiment analysis, topic extraction, engagement metrics
 Auto-refresh: Automatically fetches new mentions every 5 minutes
 Production Ready: Error handling, timeouts, graceful shutdown
 ES Modules: Modern JavaScript with clean imports/exports
-📋 Prerequisites
+
+**📋 Prerequisites**
 Node.js >= 18.0.0
 npm >= 9.0.0
-🔧 Installation
+
+**🔧 Installation**
 Clone the repository
 git clone <your-repo-url>
 cd brand-tracker-backend
 
-Install dependencies
+**Install dependencies**
 npm install
 
-Configure environment variables
+**Configure environment variables**
 cp .env.example .env
 
 Edit .env and add your API keys (optional):
@@ -46,19 +30,21 @@ NEWS_API_KEY=your_news_api_key_here
 YOUTUBE_API_KEY=your_youtube_api_key_here
 
 Note: Reddit and HackerNews work without API keys! ✅
-🏃‍♂️ Running the Server
+
+**🏃‍♂️ Running the Server**
 Development Mode
 npm run dev
 
-Production Mode
+**Production Mode**
 npm start
 
 Server will start at: http://localhost:5000
-📡 API Endpoints
-Health Check
+
+**📡 API Endpoints**
+**Health Check**
 GET /api/health
 
-Start Monitoring
+**Start Monitoring**
 POST /api/monitor/start
 Content-Type: application/json
 
@@ -66,14 +52,15 @@ Content-Type: application/json
   "brand": "OpenAI"
 }
 
-Get Mentions
+**Get Mentions**
 GET /api/mentions?sentiment=positive&source=Reddit&limit=50
 
 Query Parameters:
 sentiment: Filter by sentiment (positive/negative/neutral)
 source: Filter by source (Reddit/HackerNews/News/YouTube)
 limit: Maximum number of results (default: 50)
-Get Analytics
+
+**Get Analytics**
 GET /api/analytics
 
 Returns:
@@ -81,7 +68,7 @@ Total mentions count
 Sentiment breakdown
 Top topics
 Recent spikes
-📁 Project Structure
+**📁 Project Structure**
 backend/
 ├── server.js                 # Main server file
 ├── services/
@@ -97,37 +84,42 @@ backend/
 ├── .gitignore
 └── README.md
 
-🔑 API Keys Setup
-News API (Optional)
+**🔑 API Keys Setup**
+**News API (Optional)**
 Visit: https://newsapi.org/register
 Sign up for a free account
 Copy your API key
 Add to .env: NEWS_API_KEY=your_key_here
-YouTube API (Optional)
+
+**YouTube API (Optional)**
 Visit: https://console.cloud.google.com/
 Create a new project
 Enable YouTube Data API v3
 Create credentials (API Key)
 Add to .env: YOUTUBE_API_KEY=your_key_here
-🚀 Deployment
+
+**🚀 Deployment**
 Deploy to Heroku
 heroku create your-app-name
 heroku config:set NEWS_API_KEY=your_key_here
 git push heroku main
 
-Deploy to Render
+**Deploy to Render**
 Connect your GitHub repository
 Set environment variables in Render dashboard
 Deploy!
-Deploy to Railway
+
+**Deploy to Railway**
 Connect your GitHub repository
 Add environment variables
 Deploy automatically
-Deploy to DigitalOcean App Platform
+
+**Deploy to DigitalOcean App Platform**
 Connect your GitHub repository
 Configure environment variables
 Deploy!
-🛡️ Production Best Practices
+
+**🛡️ Production Best Practices**
 ✅ Implemented:
 Error handling with try-catch blocks
 Request timeouts (10 seconds)
@@ -137,7 +129,8 @@ Rate limiting ready
 CORS configured
 Environment variables
 Logging for debugging
-🧪 Testing
+
+**🧪 Testing**
 Test the API using curl:
 # Health check
 curl http://localhost:5000/api/health
@@ -153,7 +146,7 @@ curl http://localhost:5000/api/mentions?limit=10
 # Get analytics
 curl http://localhost:5000/api/analytics
 
-📊 Response Examples
+**📊 Response Examples**
 Start Monitoring Response
 {
   "success": true,
@@ -166,7 +159,7 @@ Start Monitoring Response
   }
 }
 
-Analytics Response
+**Analytics Response**
 {
   "success": true,
   "data": {
@@ -184,24 +177,26 @@ Analytics Response
   }
 }
 
-🐛 Troubleshooting
+**🐛 Troubleshooting**
 Port already in use
 # Change PORT in .env file
 PORT=3001
 
-API rate limits
+**API rate limits**
 News API: 100 requests/day (free tier)
 YouTube API: 10,000 units/day (free tier)
 Reddit & HackerNews: No limits!
-Module not found errors
+
+**Module not found errors**
 # Reinstall dependencies
 rm -rf node_modules package-lock.json
 npm install
 
-📝 License
+**📝 License**
 MIT License - feel free to use in your projects!
-🤝 Contributing
+
+**🤝 Contributing**
 Contributions are welcome! Please open an issue or submit a pull request.
-📧 Support
+
+**📧 Support**
 For issues or questions, please open a GitHub issue.
->>>>>>> 1ec891335b89d2ef1d8cf1ab270cd22ea74614ca
